@@ -1,4 +1,4 @@
-<h1 align="center">Parlador Ideal</h1>
+<h1 align="center">Palrador Ideal</h1>
 
 <p align="center">Uma rede social que visa facilitar a troca de idéias libertárias</p>
 
@@ -12,7 +12,7 @@
 </p>
 
 <h4 align="center"> 
-	🚧  Parlador Ideal em construção...  🚧
+	🚧  Palrador Ideal em construção...  🚧
 </h4>
 
 ### Features
