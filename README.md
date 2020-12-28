@@ -3,10 +3,8 @@
 <p align="center">Uma rede social que visa facilitar a troca de idéias libertárias</p>
 
 <p align="center">
- <a href="#objetivo">Objetivo</a> •
  <a href="#funções">Funções</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#licenc-a">Licença</a> • 
  <a href="#autor">Autor</a>
 </p>
 
