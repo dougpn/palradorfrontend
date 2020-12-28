@@ -4,6 +4,7 @@
 
 <p align="center">
  <a href="#funções">Funções</a> • 
+ <a href="#Pré-requisitos">Rodando o Mobile</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#autor">Autor</a>
 </p>
