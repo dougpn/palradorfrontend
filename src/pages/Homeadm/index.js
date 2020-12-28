@@ -54,7 +54,6 @@ useEffect(() => {
         <TouchableOpacity
           style={styles.actionpostButton}
           onPress={() => Postdelete(item._id)}
-          disabled={item.nome !== 'Douglas'}
         >
           <Text style= {styles.actionpostButtonText}>Apagar Post</Text>
         </TouchableOpacity>
