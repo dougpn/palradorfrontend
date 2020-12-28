@@ -25,6 +25,7 @@
 ### Funções
 
 - [x] Cadastro de usuário
-- [x] Autenticação do usuário
+- [ ] Autenticação do usuário
 - [x] Exclusão de posts
-- [ ] Criação de novos posts
+- [x] Criação de novos posts
+- [x] Edição de posts
