@@ -66,12 +66,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ### Autor
 
 <a href="https://github.com/dougpn/">
- <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/62621650?s=400&u=d9672bc16aaaf1fd2b3df06d7e42068ffec48525&v=4" />
+ <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/62621650?s=400&u=d9672bc16aaaf1fd2b3df06d7e42068ffec48525&v=4" width="100px />
  <br />
  <sub><b>Douglas Neves</b></sub></a> <a href="https://github.com/dougpn" ></a>
 
 
 Feito com ❤️ por Douglas Neves 👋🏽 Entre em contato!
 
-[![Linkedin Badge](https://img.shields.io/badge/-Douglas-Neves?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/douglaspneves/)](https://www.linkedin.com/in/douglaspneves/) 
+[![Linkedin Badge](https://img.shields.io/badge/-Douglas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/douglaspneves/)](https://www.linkedin.com/in/douglaspneves/) 
 [![Gmail Badge](https://img.shields.io/badge/-nevesdouglasp@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:nevesdouglasp@gmail.com)](mailto:nevesdouglasp@gmail.com)
