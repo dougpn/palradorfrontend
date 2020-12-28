@@ -16,9 +16,9 @@
 </h4>
 
 <img width= "250" src="./Screenshots/1.jpeg" />
-<img src="./Screenshots/2.jpeg" />
-<img src="./Screenshots/3.jpeg" />
-<img src="./Screenshots/4.jpeg" />
+<img width= "250" src="./Screenshots/2.jpeg" />
+<img width= "250" src="./Screenshots/3.jpeg" />
+<img width= "250" src="./Screenshots/4.jpeg" />
 
 
 ### Funções
