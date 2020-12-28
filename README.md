@@ -15,11 +15,12 @@
 	🚧  Parlador Ideal em construção...  🚧
 </h4>
 
+<p align="center">
 <img width= "250" src="./Screenshots/1.jpeg" />
 <img width= "250" src="./Screenshots/2.jpeg" />
 <img width= "250" src="./Screenshots/3.jpeg" />
 <img width= "250" src="./Screenshots/4.jpeg" />
-
+</p>
 
 ### Funções
 
