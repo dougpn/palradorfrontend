@@ -53,3 +53,25 @@ $ npm start
 
 # O servidor inciará na porta:19002 - acesse <http://localhost:19002>
 ```
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Expo](https://expo.io/)
+- [React](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/)
+- [React Navigation](https://reactnavigation.org/)
+
+### Autor
+
+<a href="https://github.com/dougpn/">
+ <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/62621650?s=400&u=d9672bc16aaaf1fd2b3df06d7e42068ffec48525&v=4" />
+ <br />
+ <sub><b>Douglas Neves</b></sub></a> <a href="https://github.com/dougpn" ></a>
+
+
+Feito com ❤️ por Douglas Neves 👋🏽 Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Douglas-Neves?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/douglaspneves/)](https://www.linkedin.com/in/douglaspneves/) 
+[![Gmail Badge](https://img.shields.io/badge/-nevesdouglasp@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:nevesdouglasp@gmail.com)](mailto:nevesdouglasp@gmail.com)
