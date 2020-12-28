@@ -12,10 +12,16 @@
 </p>
 
 <h4 align="center"> 
-	🚧  Palrador Ideal em construção...  🚧
+	🚧  Parlador Ideal em construção...  🚧
 </h4>
 
-### Features
+<img src="./screenshots/1.jpeg" />
+<img src="./screenshots/2.jpeg" />
+<img src="./screenshots/3.jpeg" />
+<img src="./screenshots/4.jpeg" />
+
+
+### Funções
 
 - [x] Cadastro de usuário
 - [x] Autenticação do usuário
