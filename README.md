@@ -15,10 +15,10 @@
 	🚧  Parlador Ideal em construção...  🚧
 </h4>
 
-<img src="./screenshots/1.jpeg" />
-<img src="./screenshots/2.jpeg" />
-<img src="./screenshots/3.jpeg" />
-<img src="./screenshots/4.jpeg" />
+<img src="./Screenshots/1.jpeg" />
+<img src="./Screenshots/2.jpeg" />
+<img src="./Screenshots/3.jpeg" />
+<img src="./Screenshots/4.jpeg" />
 
 
 ### Funções
