@@ -1,35 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import { Text, View, TouchableOpacity, FlatList } from 'react-native';
 import styles from './styles'
+import PostActions from '../../common/utils/Post_Actions'
 
 
 export default function Homeadm({ navigation }) {
   const [incidents,setIncidents] = useState([]);
+  useEffect(() => {
+    PostActions('FIND').then((data) => setIncidents(data)); 
   
-  
-  const requestOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' }
-  }
-  async function Postdelete(id) {
-  await fetch('http://192.168.0.105:3300/deletepost', {
-    method: 'DELETE',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ _id: id })
-  })
-  .then((response) => response.json())
-  .then(loadIncidents())
-}
-  async function loadIncidents() {
-    
-    
-  await fetch('http://192.168.0.105:3300/findpost', requestOptions)
-  .then((response) => response.json())
-  .then((data) => setIncidents(data))
-}
-useEffect(() => {
-  loadIncidents();
-}, []);
+    }), [];
 
   const renderItem = ({ item }) =>
   (
@@ -61,24 +41,21 @@ useEffect(() => {
       )
   return (
     <View style={styles.container}>
-            <View style={styles.header}>
-                <Text style={styles.headerText}>
-                  Seja bem vindo <Text style={styles.headerTextBold}></Text>
-                </Text>
-                <TouchableOpacity
-      style={styles.actionpostButton}
-      onPress={() => navigation.navigate('Postcreate')}
-    >
-      <Text style= {styles.actionpostButtonText}>Criar Post</Text>
-    </TouchableOpacity>
-            </View>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>
+          Seja bem vindo <Text style={styles.headerTextBold}></Text>
+        </Text>
+        <TouchableOpacity
+          style={styles.actionpostButton}
+          onPress={() => navigation.navigate('Postcreate')}>
+          <Text style= {styles.actionpostButtonText}>Criar Post</Text>
+        </TouchableOpacity>
+      </View>
       <View style={styles.container2}>
         <FlatList
           data={incidents}
           renderItem={renderItem}
-          onEndReached={loadIncidents}
-          keyExtractor={(item, index) => item._id}
-        />
+          keyExtractor={(item, index) => item._id}/>
       </View>
     </View>
   );
