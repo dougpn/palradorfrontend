@@ -14,7 +14,7 @@ export default function Postedit({ navigation }) {
       }
       
       async function Postedit(){
-        fetch('http://192.168.0.105:3300/editpost', requestOptions)
+        fetch('http://192.168.0.165:3300/editpost', requestOptions)
         .then((response) => {
             response.json()
         }).then(() => navigation.navigate('Homeadm')).catch(function(error) {

@@ -13,7 +13,7 @@ export default function Postcreate({ navigation }) {
       }
       
       async function Createpost(){
-        fetch('http://192.168.0.105:3300/createpost', requestOptions)
+        fetch('http://192.168.0.165:3300/createpost', requestOptions)
         .then((response) => {
             response.json()
         }).then(() => navigation.navigate('Homeadm')).catch(function(error) {

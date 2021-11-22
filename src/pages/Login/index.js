@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Text, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Animated, Keyboard } from 'react-native';
 import styles from './styles'
+import UserActions from '../../common/utils/User_Actions'
 
 export default function Login({ navigation }) {
 
@@ -9,12 +10,6 @@ const [opacity] = useState(new Animated.Value(0));
 const [logo] = useState(new Animated.ValueXY({x: 130, y: 155}))
 const [login, setLogin] = useState('')
 const [senha, setSenha] = useState('')
-
-const requestOptions = {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ email: login, password: senha })
-}
 
 useEffect(()=> {
     keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', keyboardDidShow);
@@ -64,23 +59,9 @@ useEffect(()=> {
       }),
     ]).start();
   }
-  async function Logar(){
-    return fetch('http://192.168.0.105:3300/login', requestOptions)
-  .then(async (resp) => {
-    if (resp.ok) {
-      return resp.json()
-        .then((responseData) => {
-          return responseData;
-        });
-    }
-    return resp.json()
-      .then((error) => {
-        return Promise.reject(error);
-      });
-  })
-  .then(() => navigation.navigate('Homeadm'))
+  async function Logar(){UserActions('LOGIN', login, senha).then(() => navigation.navigate('Homeadm'))
   .catch(err => console.log('Deu ruim'));
-}
+  }
 
   return (
     <KeyboardAvoidingView style={styles.background}>
