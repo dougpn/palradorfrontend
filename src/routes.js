@@ -11,15 +11,15 @@ import Postedit from './pages/Postedit';
 const Stack = createStackNavigator();
 
 export default function Routes() {
-    return(
-        <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false}} initialRouteName="Login">
-                <Stack.Screen name="Login" component={ Login } />
-                <Stack.Screen name="Register" component={ Register } />
-                <Stack.Screen name="Homeadm" component={ Homeadm } />
-                <Stack.Screen name="Postcreate" component={ Postcreate } />
-                <Stack.Screen name="Postedit" component={ Postedit } />
-            </Stack.Navigator>
-        </NavigationContainer>
-    )
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false}} initialRouteName="Login">
+        <Stack.Screen name="Login" component={ Login } />
+        <Stack.Screen name="Register" component={ Register } />
+        <Stack.Screen name="Homeadm" component={ Homeadm } />
+        <Stack.Screen name="Postcreate" component={ Postcreate } />
+        <Stack.Screen name="Postedit" component={ Postedit } />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 };

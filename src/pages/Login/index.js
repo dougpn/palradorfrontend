@@ -5,13 +5,13 @@ import UserActions from '../../common/utils/User_Actions'
 
 export default function Login({ navigation }) {
 
-const [offset] = useState(new Animated.ValueXY({x: 0,y: 95}));
-const [opacity] = useState(new Animated.Value(0));
-const [logo] = useState(new Animated.ValueXY({x: 130, y: 155}))
-const [login, setLogin] = useState('')
-const [senha, setSenha] = useState('')
+  const [offset] = useState(new Animated.ValueXY({x: 0,y: 95}));
+  const [opacity] = useState(new Animated.Value(0));
+  const [logo] = useState(new Animated.ValueXY({x: 130, y: 155}))
+  const [login, setLogin] = useState('')
+  const [senha, setSenha] = useState('')
 
-useEffect(()=> {
+  useEffect(()=> {
     keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', keyboardDidShow);
     keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', keyboardDidHide);
   
@@ -29,7 +29,7 @@ useEffect(()=> {
         useNativeDriver: true
       })
     ]).start();
-  }, []);
+  });
   
   function keyboardDidShow(){
     Animated.parallel([
@@ -60,18 +60,18 @@ useEffect(()=> {
     ]).start();
   }
   async function Logar(){UserActions('LOGIN', login, senha).then(() => navigation.navigate('Homeadm'))
-  .catch(err => console.log('Deu ruim'));
+    .catch(err => console.log('Deu ruim'));
   }
 
   return (
     <KeyboardAvoidingView style={styles.background}>
       <View style={styles.containerLogo}>
         <Animated.Image
-        style= {{
-          width: logo.x,
-          height: logo.y,
-        }}
-        source={require('../../../assets/dpn.png')}
+          style= {{
+            width: logo.x,
+            height: logo.y,
+          }}
+          source={require('../../../assets/dpn.png')}
         />
       </View>
 
@@ -82,19 +82,19 @@ useEffect(()=> {
             { translateY: offset.y }
           ]
         }
-        ]}>
+      ]}>
         <TextInput
-        style={styles.input}
-        placeholder="Email"
-        autoCorrect={false}
-        onChangeText={login => {setLogin(login)}}
+          style={styles.input}
+          placeholder="Email"
+          autoCorrect={false}
+          onChangeText={login => {setLogin(login)}}
         />
 
         <TextInput
-        style={styles.input}
-        placeholder="Senha"
-        autoCorrect={false}
-        onChangeText={senha =>{setSenha(senha)}}
+          style={styles.input}
+          placeholder="Senha"
+          autoCorrect={false}
+          onChangeText={senha =>{setSenha(senha)}}
         />
       </Animated.View>
 

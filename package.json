@@ -26,7 +26,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "babel-preset-expo": "8.5.1"
+    "babel-preset-expo": "8.5.1",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.4.1"
   },
   "private": true
 }

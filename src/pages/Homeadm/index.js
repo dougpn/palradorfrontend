@@ -8,24 +8,24 @@ export default function Homeadm({ navigation }) {
   const [incidents,setIncidents] = useState([]);
   const [loading, setLoading] = useState(true);
   const fetchData = async () => {
-   const Posts = await PostActions('POST')
-   setIncidents(Posts)
-   setLoading(false);
+    const Posts = await PostActions('POST')
+    setIncidents(Posts)
+    setLoading(false);
    
   };
   async function del(itemId) {
     await PostActions('DELETE', itemId)
-   };
+  };
   useEffect(() => {
     fetchData()
     return () => {
-      setLoading(false); // This worked for me
+      setLoading(false);
     };
   }, [incidents]); 
 
 
   const renderItem = ({ item }) =>
-  (
+    (
       <View style={styles.post} >
         <Text style={styles.postProperty}>Nome de Usuário:</Text>
         <Text style={styles.postValue}>{item.nome}</Text>
@@ -51,12 +51,12 @@ export default function Homeadm({ navigation }) {
           <Text style= {styles.actionpostButtonText}>Apagar Post</Text>
         </TouchableOpacity>
       </View>
-      )
+    )
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>
-          Seja bem vindo <Text style={styles.headerTextBold}></Text>
+          Seja bem vindo <Text style={styles.headerTextBold} />
         </Text>
         <TouchableOpacity
           style={styles.actionpostButton}
@@ -71,8 +71,8 @@ export default function Homeadm({ navigation }) {
           keyExtractor={item => item._id}
           onRefresh={() => {
             fetchData()
-        }}
-        refreshing={loading}/>
+          }}
+          refreshing={loading}/>
       </View>
     </View>
   );
