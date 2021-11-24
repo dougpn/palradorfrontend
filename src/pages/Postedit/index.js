@@ -28,8 +28,7 @@ export default function Postedit({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>
-  Seja bem vindo <Text style={styles.headerTextBold} />
+        <Text style={styles.headerText}>  Seja bem vindo <Text style={styles.headerTextBold} />
         </Text>
         <TouchableOpacity
           style={styles.actionpostButton}
