@@ -1,20 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import { Text, View, TouchableOpacity, FlatList } from 'react-native';
 import styles from './styles'
-import PostActions from '../../common/utils/Post_Actions'
+import PostController from '../../common/utils/Post_Controller'
 
 
 export default function Homeadm({ navigation }) {
   const [incidents,setIncidents] = useState([]);
   const [loading, setLoading] = useState(true);
   const fetchData = async () => {
-    const Posts = await PostActions('POST')
+    const Posts = await PostController('POST')
     setIncidents(Posts)
     setLoading(false);
    
   };
   async function del(itemId) {
-    await PostActions('DELETE', itemId)
+    await PostController('DELETE', itemId)
   };
   useEffect(() => {
     fetchData()

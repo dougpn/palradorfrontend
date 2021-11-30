@@ -11,7 +11,7 @@ export default function SplashScreen(){
     };
               
     bootstrapAsync();
-  }, []);
+  });
   return (<View style={{ backgroundColor: 'red'}}><Text style={styles.headerText}>
           Seja bem vindo <Text style={styles.headerTextBold} />
   </Text></View>)}
