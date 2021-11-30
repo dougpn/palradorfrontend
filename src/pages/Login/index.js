@@ -2,9 +2,10 @@ import React, {useState, useEffect} from 'react';
 import { Text, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Animated, Keyboard } from 'react-native';
 import styles from './styles'
 import UserActions from '../../common/utils/User_Actions'
+import { useDispatch, useSelector } from 'react-redux'
 
 export default function Login({ navigation }) {
-
+  const dispatch = useDispatch()
   const [offset] = useState(new Animated.ValueXY({x: 0,y: 95}));
   const [opacity] = useState(new Animated.Value(0));
   const [logo] = useState(new Animated.ValueXY({x: 130, y: 155}))
@@ -59,7 +60,9 @@ export default function Login({ navigation }) {
       }),
     ]).start();
   }
-  async function Logar(){UserActions('LOGIN', login, senha).then(() => navigation.navigate('Homeadm'))
+  async function Logar(){UserActions('LOGIN', login, senha)
+    .then((res) => dispatch({ type: 'SIGN_IN', token: res.nome }))
+    .then(() => dispatch({ type: 'SIGN_IN', token: 'dummy-auth-token' }))
     .catch(err => console.log('Deu ruim'));
   }
 
