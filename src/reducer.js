@@ -2,6 +2,7 @@ const initialState = {
   isLoading: true,
   isSignout: false,
   userToken: null,
+  name: null,
 }
   
 export default function appReducer(state = initialState, action) {
@@ -17,6 +18,7 @@ export default function appReducer(state = initialState, action) {
       ...state,
       isSignout: false,
       userToken: action.token,
+      name: action.name
     };
   case 'SIGN_OUT':
     return {
@@ -27,7 +29,6 @@ export default function appReducer(state = initialState, action) {
       
 
   default:
-    console.log('Seila')
     return state
   }
 }
