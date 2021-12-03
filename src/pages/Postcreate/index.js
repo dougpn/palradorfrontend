@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { Text, View, TextInput, TouchableOpacity } from 'react-native';
 import styles from './styles'
 import { useRoute } from '@react-navigation/native';
-
+import { useSelector } from 'react-redux'
 
 export default function Postcreate({ navigation }) {
   const [text, onChangeText] = useState('');
+  const userName = useSelector((state) => state.name)
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ nome: 'Douglas', text: text })
+    body: JSON.stringify({ nome: userName, text: text })
   }
 
   async function Createpost() {
