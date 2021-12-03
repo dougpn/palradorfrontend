@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Text, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Animated, Keyboard } from 'react-native';
 import styles from './styles'
 import UserController from '../../common/utils/User_Controller'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 export default function Login({ navigation }) {
   const dispatch = useDispatch()
@@ -61,8 +61,7 @@ export default function Login({ navigation }) {
     ]).start();
   }
   async function Logar(){UserController('LOGIN', login, senha)
-    .then((res) => dispatch({ type: 'SIGN_IN', token: res.nome }))
-    .then(() => dispatch({ type: 'SIGN_IN', token: 'dummy-auth-token' }))
+    .then((res) => dispatch({ type: 'SIGN_IN', token: 'dummy-auth-token', name: res[0].nome }))
     .catch(err => console.log('Deu ruim'));
   }
 
