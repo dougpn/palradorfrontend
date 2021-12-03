@@ -2,11 +2,16 @@ import React, {useState, useEffect} from 'react';
 import { Text, View, TouchableOpacity, FlatList } from 'react-native';
 import styles from './styles'
 import PostController from '../../common/utils/Post_Controller'
+import { useSelector, connect, useDispatch } from 'react-redux'
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { format } from 'date-fns'
 
 
-export default function Homeadm({ navigation }) {
+function Homeadm({ navigation }) {
+  const dispatch = useDispatch()
   const [incidents,setIncidents] = useState([]);
   const [loading, setLoading] = useState(true);
+  const userName = useSelector((state) => state.name)
   const fetchData = async () => {
     const Posts = await PostController('POST')
     setIncidents(Posts)
@@ -16,6 +21,15 @@ export default function Homeadm({ navigation }) {
   async function del(itemId) {
     await PostController('DELETE', itemId)
   };
+
+  function date(date) {
+    return format(new Date (date), 'dd/MM/yyyy')
+  }
+  async function logout(){
+    dispatch({type: 'SIGN_OUT'})
+  }
+
+
   useEffect(() => {
     fetchData()
     return () => {
@@ -31,7 +45,7 @@ export default function Homeadm({ navigation }) {
         <Text style={styles.postValue}>{item.nome}</Text>
         
         <Text style={styles.postProperty}>Data:</Text>
-        <Text style={styles.postValue}>{item.createdAt}</Text>
+        <Text style={styles.postValue}>{date(item.createdAt)}</Text>
     
         <Text style={styles.postProperty}>Texto:</Text>
         <Text style={styles.postValue}>{item.text}</Text>
@@ -56,8 +70,9 @@ export default function Homeadm({ navigation }) {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>
-          Seja bem vindo <Text style={styles.headerTextBold} />
+          Seja bem vindo <Text style={styles.headerTextBold}>{userName}</Text>
         </Text>
+        <Icon name="power-settings-new" size={25} color="red" onPress={logout}/>
         <TouchableOpacity
           style={styles.actionpostButton}
           onPress={() => navigation.navigate('Postcreate')}>
@@ -77,3 +92,4 @@ export default function Homeadm({ navigation }) {
     </View>
   );
 }
+export default connect((state) => state)(Homeadm)
